@@ -2,7 +2,7 @@ const router = require('express').Router();
 module.exports = router;
 
 // Mounts players api calls from api file on /api/players
-router.use('/players', require('./players'));
+router.use('/item', require('./items'));
 
 //Anythingn not found gets a 404
 router.use((req, res, next) => {
