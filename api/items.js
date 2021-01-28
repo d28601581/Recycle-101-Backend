@@ -15,11 +15,14 @@ router.get('/', async (req, res, next) => {
   }
 });
 
-router.post('/', async (req, res, next) => {
+router.post('/newitem', async (req, res, next) => {
+  console.log(req.body)
   try {
     const item = await Item.create(
-      req.query
+      
+      req.body
     );
+    res.send(item)
   } catch (error) {
     next(error);
   }

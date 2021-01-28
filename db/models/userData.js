@@ -7,7 +7,7 @@ const UserData = db.define('userData', {
   
   total:{
     type: Sequelize.INTEGER,
-    allowNull: false
+    
   }
 
 });
