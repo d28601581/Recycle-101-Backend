@@ -4,6 +4,7 @@ module.exports = router;
 // Mounts players api calls from api file on /api/players
 router.use('/item', require('./items'));
 router.use('/userdata', require('./userData'));
+router.use('/auth', require('./auth'))
 
 //Anythingn not found gets a 404
 router.use((req, res, next) => {

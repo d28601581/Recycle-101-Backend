@@ -19,7 +19,6 @@ router.post('/newitem', async (req, res, next) => {
   console.log(req.body)
   try {
     const item = await Item.create(
-      
       req.body
     );
     res.send(item)
