@@ -1,32 +1,24 @@
-const db = require('./db');
-const Players = require('./db/models').Player;
 
-// const seedPlayers = [
-//   { firstName: 'Bilbo', lastName: 'Baggins', jerseyNumber: 11 },
-//   { firstName: 'Harry', lastName: 'Potter', jerseyNumber: 22 },
-//   { firstName: 'Lucifer', lastName: 'Morningstart', jerseyNumber: 666 },
-// ];
+const {Item} = require('./db/models');
 
-// const seed = () => {
-//   return Players.bulkCreate(seedPlayers);
-// };
+const seedPlayers = [
+  { itemName: 'Bottle', quantity: 5, category: 'plastic', points: 10},
+];
 
-const seed = async () => {
-  console.log('before')
-  await Promise.all([
+const seed = () => {
+  return Item.bulkCreate(seedPlayers);
+};
+
+// const seed = async () => {
+//   console.log('before')
+//   await Promise.all([
     
-    Players.create({
-      firstName: 'Bilbo', lastName: 'Baggins', jerseyNumber: 11
-    }),
-    Players.create({
-      firstName: 'Harry', lastName: 'Potter', jerseyNumber: 22
-    }),
-    Players.create({
-      firstName: 'Lucifer', lastName: 'Morningstart', jerseyNumber: 666
-    }),
-  ]);
-  console.log('after')
-}
+//     Item.create({
+//       itemName: 'Bottle', quantity: 5, category: 'plastic', points: 10
+//     }),
+//   ]);
+//   console.log('after')
+// }
 
 console.log('seeding')
 seed().then(() => process.exit());
