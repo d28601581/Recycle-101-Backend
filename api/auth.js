@@ -27,7 +27,7 @@ router.post('/signup', async (req, res, next) =>{
             password: hashedPassword
 
         })
-        res.send(user)
+        res.send(req.body.userName)
         
     } catch (error) {
         next(error);
