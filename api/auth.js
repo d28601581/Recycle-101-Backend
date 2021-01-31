@@ -26,7 +26,6 @@ router.post('/signup', async (req, res, next) =>{
             userName: req.body.userName,
             email: req.body.email,
             password: hashedPassword
-
         })
         res.send(req.body.userName)
         
