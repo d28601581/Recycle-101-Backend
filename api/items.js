@@ -3,9 +3,14 @@ const router = express.Router();
 const { Item } = require('../db/models');
 
 // Express Routes for Players - Read more on routing at https://expressjs.com/en/guide/routing.html
-router.get('/:userName', async (req, res, next) => {
+router.get('/getitem', async (req, res, next) => {
+
+  console.log('body', req.body)
   try {
-    const allItems = await Item.findAll({where:{userName: req.body.userName}}, {multi: true});
+    const allItems = await Item.findAll(
+      {where:
+         {user: req.body.user }}
+    );
     // An if/ternary statement to handle not finding allPlayers explicitly
     !allItems
       ? res.status(404).send('Players Listing Not Found')
