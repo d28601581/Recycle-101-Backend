@@ -20,6 +20,10 @@ const Item = db.define('item', {
     type: Sequelize.INTEGER,
     allowNull: false
   },
+  user: {
+    type: Sequelize.STRING,
+    allowNull: false
+  }
 });
 
 module.exports = Item;

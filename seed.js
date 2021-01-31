@@ -2,7 +2,7 @@
 const {Item} = require('./db/models');
 
 const seedPlayers = [
-  { itemName: 'Bottle', quantity: 5, category: 'plastic', points: 10},
+  { itemName: 'Bottle', quantity: 5, category: 'plastic', points: 10, user: 'none'},
 ];
 
 const seed = () => {
