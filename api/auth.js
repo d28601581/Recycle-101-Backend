@@ -4,6 +4,7 @@ const { User } = require('../db/models');
 const {signUpValidation, logInValidation} = require('../validation')
 const bcrypt = require('bcryptjs')
 
+
 router.post('/signup', async (req, res, next) =>{
 
     const {error} = signUpValidation(req.body);
@@ -45,14 +46,12 @@ router.post('/login', async (req, res, next) =>{
 
     const validPass = await bcrypt.compare(req.body.password, emailExist.password);
     if(!validPass) return res.status(400).send('Incorrect Email or password')
-
+    console.log(req.user)
     res.send('Logged In')
+    
+
 
     
-})
-
-router.post('/login', (req, res) => {
-
 })
 
 module.exports = router;
