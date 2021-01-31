@@ -8,7 +8,7 @@ const session = require("express-session");
 const passport = require("passport");
 
 //IMPORTS/VARIABLES
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5432;
 
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const db = require('./db');
