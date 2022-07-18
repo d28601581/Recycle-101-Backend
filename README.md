@@ -4,7 +4,7 @@ __Made by:__ Ariel Benzur, Peng Dong, Mohammad Hossain </br>
 __Date:__ Jan. 25th - Jan 31st 2021 </br>
 __Timeframe:__ A week  </br>
 __Deployed at:__ TBA </br>
-__Link to Front-end:__ https://github.com/ArielBenz171/Frontend-Capstone-TTP-2021 </br>
+__Link to Front-end:__ https://github.com/d28601581/Recycle-101 </br>
 
 ## UI Wireframes:
 These wireframes were made pre-development to lay the foundation for the idea. </br>
